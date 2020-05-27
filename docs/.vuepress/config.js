@@ -20,7 +20,7 @@ module.exports = {
 		["meta", { name: "theme-color", content: "#11a8cd" }], // 移动浏览器主题颜色
 
 		// 不蒜子访问量统计
-		// ['script', { src: '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async: 'async'}]
+		['script', { src: '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async: 'async'}]
 	],
 	markdown: {
 		lineNumbers: true, // 代码行号
@@ -184,14 +184,6 @@ module.exports = {
 		],
 		[
 			"vuepress-plugin-comment", // 评论
-			// {
-			//   choosen: 'valine',
-			//   options: {
-			//     el: '#valine-vuepress-comment',
-			//     appId: 'Your own appId',
-			//     appKey: 'Your own appKey'
-			//   }
-			// }
 			{
 				choosen: "gitalk",
 				options: {
