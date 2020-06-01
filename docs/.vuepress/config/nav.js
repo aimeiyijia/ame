@@ -8,7 +8,7 @@ module.exports = [
 				text: "前端核心",
 				items: [
 					{ text: "HTML", link: "/core/html/" },
-					{ text: "CSS", link: "/core/css/" },
+					{ text: "CSS", link: "/pages/e1d013/" },
 					{ text: "JavaScript", link: "/core/javascript/" }, // 注意link结尾有斜杠和没有斜杠的区别
 					{ text: "TypeScript", link: "/core/typescript/" },
 					{ text: "UI库", link: "/core/ui-library/" },
@@ -18,9 +18,7 @@ module.exports = [
 			},
 			{
 				text: "学习笔记",
-				items: [
-					{ text: "《JavaScript教程》笔记", link: "/note/javascript/" },
-				],
+				items: [{ text: "《JavaScript教程》笔记", link: "/note/javascript/" }],
 			},
 		],
 	},
@@ -33,13 +31,11 @@ module.exports = [
 		],
 	},
 	{
-		text: "计算机",
+		text: "计算机技术",
 		link: "/technology/",
 		items: [
-			{ text: "技术文档", link: "/pages/9a7ee40fc232253e/" },
-			{ text: "GitHub技巧", link: "/pages/4c778760be26d8b3/" },
-			{ text: "Nodejs", link: "/pages/117708e0af7f0bd9/" },
-			{ text: "博客搭建", link: "/pages/41f87d890d0a02af/" },
+			{ text: "网络", link: "/computer/network/" },
+			{ text: "数据结构与算法", link: "/computer/datastructuresandalgorithms/" },
 		],
 	},
 	{
