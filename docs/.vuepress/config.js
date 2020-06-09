@@ -20,7 +20,7 @@ module.exports = {
 		["meta", { name: "theme-color", content: "#11a8cd" }], // 移动浏览器主题颜色
 
 		// 不蒜子访问量统计
-		['script', { src: '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async: 'async'}]
+		// ['script', { src: '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async: 'async'}]
 	],
 	markdown: {
 		lineNumbers: true, // 代码行号
@@ -72,7 +72,7 @@ module.exports = {
 		},
 		blogger: {
 			// 博主信息，显示在首页侧边栏
-			avatar: "/img/title.png",
+			avatar: "/img/title.jpg",
 			name: "Ame",
 			slogan: "做一个懂UI的前端工程师",
 		},
