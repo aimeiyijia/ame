@@ -72,7 +72,7 @@ module.exports = {
 		},
 		blogger: {
 			// 博主信息，显示在首页侧边栏
-			avatar: "/img/title.jpg",
+			avatar: "https://cdn.jsdelivr.net/gh/aimeiyijia/blog-images/img/title.jpg",
 			name: "Ame",
 			slogan: "做一个懂UI的前端工程师",
 		},
