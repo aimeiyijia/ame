@@ -20,5 +20,5 @@ npm run dev # or yarn dev
 
 ## 许可证
 
-
+MIT
 
