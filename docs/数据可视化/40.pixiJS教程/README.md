@@ -1,3 +1,13 @@
+---
+title: README
+date: 2020-06-12 17:03:45
+permalink: /pages/a9ac29/
+categories: 
+  - 数据可视化
+  - pixiJS教程
+tags: 
+  - 
+---
 Pixi教程
 =============
 
