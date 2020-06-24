@@ -11,7 +11,7 @@ module.exports = [
 					{ text: "CSS", link: "/pages/e1d013/" },
 					{ text: "JavaScript", link: "/pages/1155ec/" }, // 注意link结尾有斜杠和没有斜杠的区别
 					{ text: "TypeScript", link: "/core/typescript/" },
-					{ text: "UI库", link: "/core/ui-library/" },
+					{ text: "UI库", link: "/pages/db7a96/" },
 					{ text: "前端框架", link: "/core/frontend-framework/" },
 					{ text: "前端工具库", link: "/core/frontend-tools/" },
 				],
@@ -25,17 +25,19 @@ module.exports = [
 	{
 		text: "UI",
 		link: "/ui/",
-		items: [
-			{ text: "HTML", link: "/pages/8309a5b876fc95e3/" },
-			{ text: "CSS", link: "/pages/0a83b083bdf257cb/" },
-		],
+		items: [],
 	},
 	{
 		text: "计算机技术",
 		link: "/technology/",
 		items: [
+			{ text: "编译原理", link: "" },
 			{ text: "网络", link: "/computer/network/" },
+			{ text: "计算机组成", link: "" },
 			{ text: "数据结构与算法", link: "/computer/datastructuresandalgorithms/" },
+			{ text: "操作系统原理", link: "" },
+			{ text: "设计模式", link: "" },
+			{ text: "数据库", link: "" },
 		],
 	},
 	{
