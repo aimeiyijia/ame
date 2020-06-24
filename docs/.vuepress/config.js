@@ -179,7 +179,7 @@ module.exports = {
 		[
 			"vuepress-plugin-baidu-tongji", // 百度统计
 			{
-				hm: "503f098e7e5b3a5b5d8c5fc2938af002",
+				hm: "de4597e45d6d6661371d3a9f238925b6",
 			},
 		],
 		[
