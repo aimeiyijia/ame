@@ -17,6 +17,10 @@ module.exports = [
 				],
 			},
 			{
+				text: "也许是后端",
+				items: [{ text: "node", link: "/pages/55ba89/" }],
+			},
+			{
 				text: "学习笔记",
 				items: [{ text: "《JavaScript教程》笔记", link: "/note/javascript/" }],
 			},
