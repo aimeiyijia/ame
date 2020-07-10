@@ -210,6 +210,7 @@ module.exports = {
 				},
 			},
 		],
+		"vuepress-plugin-smooth-scroll", //平滑滚动插件
 	],
 	// configureWebpack: {
 	//   //webpack别名 如![Image from alias](~@alias/image.png)
