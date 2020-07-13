@@ -13,7 +13,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "inquirer": "^7.3.0",
+    "inquirer": "^7.3.1",
     "json2yaml": "^1.1.0",
     "moment": "^2.27.0",
     "vuepress": "^1.5.2",
