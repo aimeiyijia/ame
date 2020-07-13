@@ -9,7 +9,8 @@ module.exports = [
 				items: [
 					{ text: "HTML", link: "/core/html/" },
 					{ text: "CSS", link: "/pages/e1d013/" },
-					{ text: "JavaScript", link: "/pages/1155ec/" }, // 注意link结尾有斜杠和没有斜杠的区别
+					{ text: "JavaScript", link: "/pages/1155ec/" },
+					{ text: "Web API接口", link: "/pages/0907d0/" },
 					{ text: "TypeScript", link: "/core/typescript/" },
 					{ text: "UI库", link: "/pages/db7a96/" },
 					{ text: "前端框架", link: "/core/frontend-framework/" },
