@@ -35,4 +35,4 @@ jobs:
           SOURCE: "docs/.vuepress/dist/"
           REMOTE_HOST: "121.196.41.45"
           REMOTE_USER: "root"
-          TARGET: "/home/ame"
+          TARGET: "/home/test/"
