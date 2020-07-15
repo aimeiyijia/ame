@@ -16,7 +16,7 @@ jobs:
           args: git submodule update --init --recursive
       # 使用 node:10
       - name: Setup node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v1
         with:
           node-version: '12'
           check-latest: true
