@@ -19,7 +19,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '12'
-          check-latest: true
       # npm install
       - name: npm install and build
         run: |
