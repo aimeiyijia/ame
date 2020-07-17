@@ -1,26 +1,34 @@
 const fs = require("fs"),
 	path = require("path"),
+	process = require("process"),
 	NodeSSH = require("node-ssh"),
-	ssh = new NodeSSH();
+	chalk = require("chalk");
+const ssh = new NodeSSH();
+const rootPath = path.join(__dirname, "..");
+const storageDirectoryInLocal = path.join(rootPath, "/docs/.vuepress/dist");
+const storageDirectoryInRemote = "/home/test";
 
 ssh.connect({
 	host: "121.196.41.45",
 	username: "root",
-	password: "abc123$%^",
+	// password: "abc123$%^",
 	port: 22, //SSH连接默认在22端口
-	// privateKey: "/modules/server.key",
+	privateKey: rootPath + "/utils/modules/id_rsa",
 })
 	.then(function(e) {
 		// Local, Remote
-		ssh.getFile("C:\Users\liufe\Desktop", "/home/index.html").then(
-			function(Contents) {
-				console.log("The File's contents were successfully downloaded");
-			},
-			function(error) {
-				console.log("Something's wrong");
-				console.log(error);
-			}
-		);
+		ssh.putDirectory(storageDirectoryInLocal, storageDirectoryInRemote)
+			.then(
+				function(Contents) {
+					console.log("文件夹内容传输成功！");
+				},
+				function(error) {
+					console.log(error, "文件夹内容传输失败！");
+				}
+			)
+			.finally(() => {
+				process.exit();
+			});
 	})
 	.catch((err) => {
 		console.log(err);
