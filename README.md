@@ -20,5 +20,5 @@ npm run dev # or yarn dev
 
 ## 许可证
 
-MIT
+[MIT](https://github.com/aimeiyijia/ame/blob/master/LICENSE)
 
