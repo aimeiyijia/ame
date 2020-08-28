@@ -13,7 +13,7 @@ module.exports = [
 					{ text: "Web API接口", link: "/pages/0907d0/" },
 					{ text: "TypeScript", link: "/core/typescript/" },
 					{ text: "UI库", link: "/pages/db7a96/" },
-					{ text: "前端框架", link: "/core/frontend-framework/vue" },
+					{ text: "前端框架", link: "/core/frontend-framework/vue/" },
 					{ text: "前端工具库", link: "/core/frontend-tools/" },
 				],
 			},
