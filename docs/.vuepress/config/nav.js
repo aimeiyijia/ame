@@ -13,7 +13,7 @@ module.exports = [
 					{ text: "Web API接口", link: "/pages/0907d0/" },
 					{ text: "TypeScript", link: "/core/typescript/" },
 					{ text: "UI库", link: "/pages/db7a96/" },
-					{ text: "前端框架", link: "/core/frontend-framework/" },
+					{ text: "前端框架", link: "/core/frontend-framework/vue" },
 					{ text: "前端工具库", link: "/core/frontend-tools/" },
 				],
 			},
@@ -61,8 +61,10 @@ module.exports = [
 		link: "/pages/beb6c0bd8a66cea6/",
 		items: [
 			{ text: "网站", link: "/pages/beb6c0bd8a66cea6/" },
-			{ text: "资源", link: "/pages/eee83a9211a70f9d/" },
+			{ text: "前端通用资源", link: "/pages/eee83a9211a70f9d/" },
 			{ text: "Vue资源", link: "/pages/12df8ace52d493f6/" },
+			{ text: "React资源", link: "/pages/af8dde/" },
+			{ text: "Node资源", link: "/pages/c0cd07/" },
 		],
 	},
 	{
