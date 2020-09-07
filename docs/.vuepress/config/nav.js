@@ -41,7 +41,7 @@ module.exports = [
 			{ text: "网络", link: "/computer/network/" },
 			{ text: "计算机组成", link: "" },
 			{ text: "数据结构与算法", link: "/computer/datastructuresandalgorithms/" },
-			{ text: "操作系统原理", link: "" },
+			{ text: "操作系统原理", link: "/computer/os/" },
 			{ text: "设计模式", link: "/pages/a7a349/" },
 			{ text: "数据库", link: "" },
 		],
