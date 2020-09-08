@@ -7,7 +7,7 @@ module.exports = [
 			{
 				text: "前端核心",
 				items: [
-					{ text: "HTML", link: "/core/html/" },
+					{ text: "HTML", link: "/pages/15eb6c/" },
 					{ text: "CSS", link: "/pages/e1d013/" },
 					{ text: "JavaScript", link: "/pages/1155ec/" },
 					{ text: "Web API接口", link: "/pages/0907d0/" },
@@ -24,7 +24,7 @@ module.exports = [
 			},
 			{
 				text: "学习笔记",
-				items: [{ text: "《JavaScript教程》笔记", link: "/note/javascript/" }],
+				items: [],
 			},
 		],
 	},
