@@ -2,8 +2,6 @@
   "name": "ameblog",
   "version": "1.0.0",
   "scripts": {
-    "dev": "vuepress dev docs",
-    "start": "vuepress dev docs",
     "serve": "vuepress dev docs",
     "build": "vuepress build docs",
     "editFm": "node utils/editFrontmatter.js",
@@ -18,20 +16,18 @@
     "inquirer": "^7.3.1",
     "json2yaml": "^1.1.0",
     "moment": "^2.29.1",
-    "vuepress": "^1.5.4",
+    "node-ssh": "^11.1.1",
+    "vuepress": "^1.8.2",
     "vuepress-plugin-baidu-autopush": "^1.0.1",
     "vuepress-plugin-baidu-tongji": "^1.0.1",
+    "vuepress-plugin-comment": "^0.7.3",
     "vuepress-plugin-demo-block": "^0.7.2",
     "vuepress-plugin-one-click-copy": "^1.0.2",
-    "vuepress-plugin-smooth-scroll": "0.0.9",
+    "vuepress-plugin-smooth-scroll": "0.0.10",
     "vuepress-plugin-thirdparty-search": "^1.0.2",
     "vuepress-plugin-zooming": "^1.1.8",
     "vuepress-theme-vdoing": "^1.4.3",
     "watchpack": "^1.6.1",
     "yamljs": "^0.3.0"
-  },
-  "dependencies": {
-    "node-ssh": "^10.0.2",
-    "vuepress-plugin-comment": "^0.7.3"
   }
 }
