@@ -20,11 +20,11 @@
     "chalk": "^3.0.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
-    "shelljs": "^0.8.4",
     "inquirer": "^7.3.1",
     "json2yaml": "^1.1.0",
     "moment": "^2.29.1",
     "node-ssh": "^11.1.1",
+    "shelljs": "^0.8.4",
     "vuepress": "^1.8.2",
     "vuepress-plugin-baidu-autopush": "^1.0.1",
     "vuepress-plugin-baidu-tongji": "^1.0.1",
@@ -40,8 +40,8 @@
   },
   "dependencies": {
     "core-js": "^2.6.12",
-    "lodash": "^4.17.20",
     "el-table-ts": "^1.0.4",
-    "element-ui": "^2.15.1"
+    "element-ui": "^2.15.1",
+    "lodash": "^4.17.20"
   }
 }
