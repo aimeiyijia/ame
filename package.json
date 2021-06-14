@@ -40,7 +40,7 @@
   },
   "dependencies": {
     "core-js": "^2.6.12",
-    "el-table-ts": "^1.0.8",
+    "el-table-ts": "^1.0.9",
     "element-ui": "^2.15.1",
     "lodash": "^4.17.20"
   }
