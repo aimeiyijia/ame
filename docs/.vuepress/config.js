@@ -74,7 +74,7 @@ module.exports = {
 			// 博主信息，显示在首页侧边栏
 			avatar: "https://cdn.jsdelivr.net/gh/aimeiyijia/blog-images/img/title.jpg",
 			name: "Ame",
-			slogan: "做一个懂UI的前端工程师",
+			slogan: "跨端修炼者",
 		},
 		social: {
 			// 社交图标，显示于博主信息栏和页脚栏
