@@ -40,8 +40,9 @@
   },
   "dependencies": {
     "core-js": "^2.6.12",
-    "el-table-ts": "^1.2.0",
+    "el-table-ts": "^1.2.10",
     "element-ui": "^2.15.1",
-    "lodash": "^4.17.20"
+    "lodash": "^4.17.20",
+    "mockjs": "^1.1.0"
   }
 }
