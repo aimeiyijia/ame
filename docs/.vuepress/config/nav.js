@@ -23,8 +23,8 @@ module.exports = [
 				items: [{ text: "node", link: "/pages/55ba89/" }],
 			},
 			{
-				text: "学习笔记",
-				items: [{ text: "暂时为空", link: "" }],
+				text: "进阶",
+				items: [{ text: "架构之旅", link: "/pages/676e00/" }],
 			},
 		],
 	},
