@@ -19,14 +19,22 @@ module.exports = [
 				],
 			},
 			{
-				text: "也许是后端",
-				items: [{ text: "node", link: "/pages/55ba89/" }],
+				text: "规范",
+				items: [{ text: "前端规范", link: "/pages/f70b3b/" }],
 			},
 			{
 				text: "进阶",
 				items: [{ text: "架构之旅", link: "/pages/676e00/" }],
 			},
 		],
+	},
+	{
+		text: "跨端",
+		link: "/cross/",
+	},
+	{
+		text: "后端",
+		link: "/backend/",
 	},
 	{
 		text: "UI",
@@ -45,12 +53,6 @@ module.exports = [
 			{ text: "数据库", link: "" },
 		],
 	},
-	{
-		text: "更多",
-		link: "/more/",
-		items: [{ text: "面试", link: "/pages/aea6571b7a8bae86/" }],
-	},
-	{ text: "关于", link: "/about/" },
 	{
 		text: "收藏",
 		link: "/pages/beb6c0bd8a66cea6/",
