@@ -1,4 +1,7 @@
+const path  = require('path')
 const nav = require("./config/nav.js");
+
+console.log(__dirname, '根')
 
 module.exports = {
 	title: "Ame's blog",
@@ -26,8 +29,8 @@ module.exports = {
 		lineNumbers: true, // 代码行号
 	},
 
-	theme: "vdoing", // 使用依赖包主题
-	// theme: require.resolve('../../ame-blog-vuepress-theme'), // 使用本地主题
+	// theme: "vdoing", // 使用依赖包主题
+	theme: path.resolve(__dirname, '../../vdoing'), // 使用本地主题
 
 	themeConfig: {
 		// 主题配置
