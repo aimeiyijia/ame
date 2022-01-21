@@ -1,17 +1,17 @@
 {
-  "name": "vuepress-theme-vdoing",
+  "name": "vuepress-theme-knowledge",
   "version": "1.9.4",
-  "description": "Vdoing theme for VuePress. 一个基于VuePress的知识管理兼博客主题。",
+  "description": "knowledge theme for VuePress. 一个基于VuePress的知识管理兼博客主题。",
   "author": {
     "name": "gaoyi(Evan) Xu"
   },
-  "homepage": "https://github.com/xugaoyi/vuepress-theme-vdoing#readme",
+  "homepage": "https://github.com/xugaoyi/vuepress-theme-knowledge#readme",
   "bugs": {
-    "url": "https://github.com/xugaoyi/vuepress-theme-vdoing/issues"
+    "url": "https://github.com/xugaoyi/vuepress-theme-knowledge/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xugaoyi/vuepress-theme-vdoing.git"
+    "url": "git+https://github.com/xugaoyi/vuepress-theme-knowledge.git"
   },
   "keywords": [
     "documentation",

@@ -1,10 +1,10 @@
 <template>
   <div>
     <main class="page">
-      <div :class="`theme-vdoing-wrapper ${bgStyle}`">
+      <div :class="`theme-knowledge-wrapper ${bgStyle}`">
         <ArticleInfo v-if="isArticle()" />
         <component
-          class="theme-vdoing-content"
+          class="theme-knowledge-content"
           v-if="pageComponent"
           :is="pageComponent"
         />
@@ -26,7 +26,7 @@
           <slot name="top" v-if="isShowSlotT" />
 
           <Content
-            class="theme-vdoing-content"
+            class="theme-knowledge-content"
             v-if="pageComponent !== 'Catalogue'"
           />
         </div>
@@ -147,11 +147,11 @@ export default {
   }
 
   >* {
-    @extend $vdoing-wrapper;
+    @extend $knowledge-wrapper;
   }
 }
 
-.theme-vdoing-wrapper {
+.theme-knowledge-wrapper {
   .content-wrapper {
     position: relative;
   }
@@ -179,7 +179,7 @@ export default {
   }
 }
 
-.theme-vdoing-wrapper {
+.theme-knowledge-wrapper {
   --linesColor: rgba(50, 0, 0, 0.05);
 
   &.bg-style-1 { // 方格
@@ -216,7 +216,7 @@ export default {
 
 // 背景纹适应深色模式
 .theme-mode-dark {
-  .theme-vdoing-wrapper {
+  .theme-knowledge-wrapper {
     --linesColor: rgba(125, 125, 125, 0.05);
   }
 }

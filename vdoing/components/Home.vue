@@ -132,7 +132,7 @@
           />
         </template>
 
-        <Content class="theme-vdoing-content custom card-box" />
+        <Content class="theme-knowledge-content custom card-box" />
       </template>
 
       <template #mainRight>
@@ -566,7 +566,7 @@ export default {
         margin-bottom: 4rem;
       }
 
-      .theme-vdoing-content {
+      .theme-knowledge-content {
         padding: 0 2rem;
         overflow: hidden;
 

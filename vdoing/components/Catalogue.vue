@@ -1,5 +1,5 @@
 <template>
-  <div class="theme-vdoing-content">
+  <div class="theme-knowledge-content">
     <div class="column-wrapper">
       <img v-if="pageData.imgUrl" :src="$withBase(pageData.imgUrl)" />
       <dl class="column-info">

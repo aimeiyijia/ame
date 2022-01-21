@@ -3,10 +3,10 @@ import { DefaultThemeConfig } from '@vuepress/types'
 type NoSidebar4DefaultThemeConfig = Omit<DefaultThemeConfig, 'sidebar'> // 忽略sidebar属性
 
 /**
- * Vdoing主题配置类型
+ * knowledge主题配置类型
  * @see https://doc.xugaoyi.com/
  */
-export interface VdoingThemeConfig extends NoSidebar4DefaultThemeConfig {
+export interface knowledgeThemeConfig extends NoSidebar4DefaultThemeConfig {
   /**
    * 是否打开分类功能. Enable classification
    * @default true

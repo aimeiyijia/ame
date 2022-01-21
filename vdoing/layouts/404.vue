@@ -1,6 +1,6 @@
 <template>
   <div class="theme-container">
-    <div class="theme-vdoing-content">
+    <div class="theme-knowledge-content">
       <span>404</span>
       <blockquote>{{ getMsg() }}</blockquote>
       <router-link to="/">返回首页</router-link>
@@ -26,7 +26,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.theme-vdoing-content {
+.theme-knowledge-content {
   margin: 3rem auto;
   padding: 1.5rem;
 

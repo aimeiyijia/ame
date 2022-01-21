@@ -22,7 +22,7 @@
     flex: 1;
 
     // width 72%
-    .theme-vdoing-content.card-box {
+    .theme-knowledge-content.card-box {
       padding: 1rem 1.5rem;
       margin-bottom: 0.9rem;
     }

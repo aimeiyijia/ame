@@ -1,6 +1,6 @@
 <template>
   <div class="custom-page archives-page">
-    <div class="theme-vdoing-wrapper">
+    <div class="theme-knowledge-wrapper">
       <h1>
         <img
           :src="currentBadge"
@@ -142,8 +142,8 @@ export default {
 @require '../styles/wrapper.styl';
 
 .archives-page {
-  .theme-vdoing-wrapper {
-    @extend $vdoing-wrapper;
+  .theme-knowledge-wrapper {
+    @extend $knowledge-wrapper;
     position: relative;
 
     @media (min-width: $contentWidth + 80) {
@@ -245,13 +245,13 @@ export default {
   }
 }
 
-.theme-mode-dark .archives-page .theme-vdoing-wrapper li a:hover, .theme-mode-read .archives-page .theme-vdoing-wrapper li a:hover {
+.theme-mode-dark .archives-page .theme-knowledge-wrapper li a:hover, .theme-mode-read .archives-page .theme-knowledge-wrapper li a:hover {
   background: var(--customBlockBg);
 }
 
 .hide-navbar {
   .archives-page {
-    .theme-vdoing-wrapper {
+    .theme-knowledge-wrapper {
       li.year {
         top: 0;
       }
