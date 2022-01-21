@@ -34,7 +34,6 @@
     "vuepress-plugin-smooth-scroll": "0.0.10",
     "vuepress-plugin-thirdparty-search": "^1.0.2",
     "vuepress-plugin-zooming": "^1.1.8",
-    "vuepress-theme-vdoing": "^1.4.3",
     "watchpack": "^1.6.1",
     "yamljs": "^0.3.0"
   },
