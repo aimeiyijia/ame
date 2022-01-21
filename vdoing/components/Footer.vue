@@ -10,13 +10,14 @@
         target="_blank"
       ></a>
     </div>
-    
+
     Theme by
     <a
       href="https://github.com/aimeiyijia/ame"
       target="_blank"
       title="本站主题"
-      >ame
+    >
+      ame
     </a>
     <template v-if="footer">
       | Copyright © {{ footer.createYear }}-{{ new Date().getFullYear() }}
@@ -29,13 +30,13 @@
 export default {
   computed: {
     social() {
-      return this.$themeConfig.social;
+      return this.$themeConfig.social
     },
     footer() {
-      return this.$themeConfig.footer;
+      return this.$themeConfig.footer
     },
   },
-};
+}
 </script>
 
 <style lang='stylus'>

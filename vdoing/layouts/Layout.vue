@@ -114,7 +114,18 @@ const MOBILE_DESKTOP_BREAKPOINT = 719 // refer to config.styl
 const NAVBAR_HEIGHT = 58 // 导航栏高度
 
 export default {
-  components: { Home, Navbar, Page, CategoriesPage, TagsPage, ArchivesPage, Sidebar, Footer, Buttons, BodyBgImg },
+  components: {
+    Home,
+    Navbar,
+    Page,
+    CategoriesPage,
+    TagsPage,
+    ArchivesPage,
+    Sidebar,
+    Footer,
+    Buttons,
+    BodyBgImg,
+  },
 
   data() {
     return {
@@ -123,7 +134,7 @@ export default {
       showSidebar: false,
       themeMode: 'light',
       showWindowLB: true,
-      showWindowRB: true
+      showWindowRB: true,
     }
   },
   computed: {
@@ -148,37 +159,35 @@ export default {
     showRightMenu() {
       const { headers } = this.$page
       return (
-        !this.$frontmatter.home
-        && this.$themeConfig.rightMenuBar !== false
-        && headers
-        && headers.length
-        && this.$frontmatter.sidebar !== false
+        !this.$frontmatter.home &&
+        this.$themeConfig.rightMenuBar !== false &&
+        headers &&
+        headers.length &&
+        this.$frontmatter.sidebar !== false
       )
     },
     shouldShowNavbar() {
       const { themeConfig } = this.$site
       const { frontmatter } = this.$page
-      if (
-        frontmatter.navbar === false
-        || themeConfig.navbar === false) {
+      if (frontmatter.navbar === false || themeConfig.navbar === false) {
         return false
       }
       return (
-        this.$title
-        || themeConfig.logo
-        || themeConfig.repo
-        || themeConfig.nav
-        || this.$themeLocaleConfig.nav
+        this.$title ||
+        themeConfig.logo ||
+        themeConfig.repo ||
+        themeConfig.nav ||
+        this.$themeLocaleConfig.nav
       )
     },
 
     shouldShowSidebar() {
       const { frontmatter } = this.$page
       return (
-        !frontmatter.home
-        && frontmatter.sidebar !== false
-        && this.sidebarItems.length
-        && frontmatter.showSidebar !== false
+        !frontmatter.home &&
+        frontmatter.sidebar !== false &&
+        this.sidebarItems.length &&
+        frontmatter.showSidebar !== false
       )
     },
 
@@ -201,12 +210,14 @@ export default {
           'no-sidebar': !this.shouldShowSidebar,
           'have-rightmenu': this.showRightMenu,
           'have-body-img': this.$themeConfig.bodyBgImg,
-          'only-sidebarItem': this.sidebarItems.length === 1 && this.sidebarItems[0].type === 'page', // 左侧边栏只有一项时
+          'only-sidebarItem':
+            this.sidebarItems.length === 1 &&
+            this.sidebarItems[0].type === 'page', // 左侧边栏只有一项时
         },
         // 'theme-mode-' + this.themeMode,
-        userPageClass
+        userPageClass,
       ]
-    }
+    },
   },
   created() {
     const sidebarOpen = this.$themeConfig.sidebarOpen
@@ -217,7 +228,8 @@ export default {
   beforeMount() {
     this.isSidebarOpenOfclientWidth()
     const mode = storage.get('mode') // 不放在created是因为vuepress不能在created访问浏览器api，如window
-    if (!mode || mode === 'auto') { // 当未切换过模式，或模式处于'跟随系统'时
+    if (!mode || mode === 'auto') {
+      // 当未切换过模式，或模式处于'跟随系统'时
       this._autoMode()
     } else {
       this.themeMode = mode
@@ -227,16 +239,16 @@ export default {
     // 引入图标库
     const social = this.$themeConfig.social
     if (social && social.iconfontCssFile) {
-      let linkElm = document.createElement("link")
-      linkElm.setAttribute('rel', 'stylesheet');
-      linkElm.setAttribute("type", "text/css")
-      linkElm.setAttribute("href", social.iconfontCssFile)
+      let linkElm = document.createElement('link')
+      linkElm.setAttribute('rel', 'stylesheet')
+      linkElm.setAttribute('type', 'text/css')
+      linkElm.setAttribute('href', social.iconfontCssFile)
       document.head.appendChild(linkElm)
     }
   },
   mounted() {
     // 初始化页面时链接锚点无法跳转到指定id的解决方案
-    const hash = document.location.hash;
+    const hash = document.location.hash
     if (hash.length > 1) {
       const id = decodeURIComponent(hash.substring(1))
       const element = document.getElementById(id)
@@ -250,29 +262,38 @@ export default {
     })
 
     // 向下滚动收起导航栏
-    let p = 0, t = 0;
-    window.addEventListener('scroll', _.throttle(() => {
-      if (!this.isSidebarOpen) { // 侧边栏关闭时
-        p = this.getScrollTop()
-        if (t < p && p > NAVBAR_HEIGHT) { // 向下滚动
-          this.hideNavbar = true
-        } else { // 向上
-          this.hideNavbar = false
+    let p = 0,
+      t = 0
+    window.addEventListener(
+      'scroll',
+      _.throttle(() => {
+        if (!this.isSidebarOpen) {
+          // 侧边栏关闭时
+          p = this.getScrollTop()
+          if (t < p && p > NAVBAR_HEIGHT) {
+            // 向下滚动
+            this.hideNavbar = true
+          } else {
+            // 向上
+            this.hideNavbar = false
+          }
+          setTimeout(() => {
+            t = p
+          }, 0)
         }
-        setTimeout(() => { t = p }, 0)
-      }
-    }, 300))
-
+      }, 300)
+    )
   },
   watch: {
     isSidebarOpen() {
-      if (this.isSidebarOpen) {  // 侧边栏打开时，恢复导航栏显示
+      if (this.isSidebarOpen) {
+        // 侧边栏打开时，恢复导航栏显示
         this.hideNavbar = false
       }
     },
     themeMode() {
       this.setBodyClass()
-    }
+    },
   },
   methods: {
     getHtmlStr(module) {
@@ -283,9 +304,12 @@ export default {
       document.body.className = 'theme-mode-' + this.themeMode
     },
     getScrollTop() {
-      return window.pageYOffset
-        || document.documentElement.scrollTop
-        || document.body.scrollTop || 0
+      return (
+        window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop ||
+        0
+      )
     },
     isSidebarOpenOfclientWidth() {
       if (document.documentElement.clientWidth < MOBILE_DESKTOP_BREAKPOINT) {
@@ -297,7 +321,8 @@ export default {
       this.$emit('toggle-sidebar', this.isSidebarOpen)
     },
     _autoMode() {
-      if (window.matchMedia('(prefers-color-scheme: dark)').matches) { // 系统处于深色模式
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // 系统处于深色模式
         this.themeMode = 'dark'
       } else {
         this.themeMode = 'light'
@@ -316,7 +341,7 @@ export default {
     onTouchStart(e) {
       this.touchStart = {
         x: e.changedTouches[0].clientX,
-        y: e.changedTouches[0].clientY
+        y: e.changedTouches[0].clientY,
       }
     },
 
@@ -330,49 +355,69 @@ export default {
           this.toggleSidebar(false)
         }
       }
-    }
-  }
+    },
+  },
 }
 </script>
 
 <style lang="stylus">
-.custom-html-window
-  position fixed
-  bottom 0
-  display flex
-  overflow hidden
-  font-weight 350
-  @media (max-width 960px)
-    display none
-  .custom-wrapper
-    position relative
-    max-width 200px
-    max-height 400px
-    .close-but
-      cursor pointer
-      position absolute
-      right 0
-      top 0
-      font-size 1.5rem
-      line-height 1.5rem
-      width 1.5rem
-      height 1.5rem
-      opacity 0
-      transition all 0.2s
-      &:hover
-        opacity 0.9
-    &:hover
-      .close-but
-        opacity 0.7
-  &.custom-html-window-lb
-    left 0
-    z-index 99
-    &>*
-      align-self flex-end
-  &.custom-html-window-rb
-    right 80px
-    z-index 10
-    justify-content flex-end
-    &>*
-      align-self flex-end
+.custom-html-window {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  overflow: hidden;
+  font-weight: 350;
+
+  @media (max-width: 960px) {
+    display: none;
+  }
+
+  .custom-wrapper {
+    position: relative;
+    max-width: 200px;
+    max-height: 400px;
+
+    .close-but {
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      opacity: 0;
+      transition: all 0.2s;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    &:hover {
+      .close-but {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &.custom-html-window-lb {
+    left: 0;
+    z-index: 99;
+
+    &>* {
+      align-self: flex-end;
+    }
+  }
+
+  &.custom-html-window-rb {
+    right: 80px;
+    z-index: 10;
+    justify-content: flex-end;
+
+    &>* {
+      align-self: flex-end;
+    }
+  }
+}
 </style>

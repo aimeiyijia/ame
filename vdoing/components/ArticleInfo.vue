@@ -9,16 +9,17 @@
 
         <li v-for="item in classifyList" :key="item">
           <!-- 跳目录页 -->
-          <router-link v-if="cataloguePermalink" :to="getLink(item)">{{
-            item
-          }}</router-link>
+          <router-link v-if="cataloguePermalink" :to="getLink(item)">
+            {{ item }}
+          </router-link>
           <!-- 跳分类页 -->
           <router-link
             v-else-if="$themeConfig.category !== false"
             :to="`/categories/?category=${encodeURIComponent(item)}`"
             title="分类"
-            >{{ item }}</router-link
           >
+            {{ item }}
+          </router-link>
           <!-- 没有跳转 -->
           <span v-else>{{ item }}</span>
         </li>
@@ -35,8 +36,9 @@
             target="_blank"
             class="beLink"
             title="作者"
-            >{{ author.name }}</a
           >
+            {{ author.name }}
+          </a>
           <a v-else href="javascript:;">{{ author.name || author }}</a>
         </div>
         <div class="date iconfont icon-riqi" title="创建时间" v-if="date">
@@ -55,8 +57,9 @@
             :to="`/categories/?category=${encodeURIComponent(item)}`"
             v-for="(item, index) in categories"
             :key="index"
-            >{{ item + ' ' }}</router-link
           >
+            {{ item + ' ' }}
+          </router-link>
         </div>
       </div>
     </div>
@@ -72,7 +75,7 @@ export default {
       classifyList: [],
       cataloguePermalink: '',
       author: null,
-      categories: []
+      categories: [],
     }
   },
   created() {
@@ -82,7 +85,7 @@ export default {
     '$route.path'() {
       this.classifyList = []
       this.getPageInfo()
-    }
+    },
   },
   methods: {
     getPageInfo() {
@@ -104,7 +107,8 @@ export default {
 
       this.classify1 = this.classifyList[0]
 
-      const cataloguePermalink = sidebar && sidebar.catalogue ? sidebar.catalogue[this.classify1] : ''// 目录页永久链接
+      const cataloguePermalink =
+        sidebar && sidebar.catalogue ? sidebar.catalogue[this.classify1] : '' // 目录页永久链接
       const author = this.$frontmatter.author || this.$themeConfig.author // 作者
       let date = (pageInfo.frontmatter.date || '').split(' ')[0] // 文章创建时间
 
@@ -122,72 +126,112 @@ export default {
       if (item === cataloguePermalink) {
         return cataloguePermalink
       }
-      return `${cataloguePermalink}${cataloguePermalink.charAt(cataloguePermalink.length - 1) === '/'
-        ? ''
-        : '/'
-        }#${item}`
-    }
-  }
+      return `${cataloguePermalink}${
+        cataloguePermalink.charAt(cataloguePermalink.length - 1) === '/'
+          ? ''
+          : '/'
+      }#${item}`
+    },
+  },
 }
 </script>
 
 <style lang='stylus' scoped>
-@require '../styles/wrapper.styl'
+@require '../styles/wrapper.styl';
 
-.articleInfo-wrap
-  @extend $wrapper
-  position relative
-  z-index 1
-  color #888
-  .articleInfo
-    overflow hidden
-    font-size 0.92rem
-    .breadcrumbs
-      margin 0
-      padding 0
-      overflow hidden
-      display inline-block
-      line-height 2rem
-      @media (max-width 960px)
-        width 100%
-      li
-        list-style-type none
-        float left
-        padding-right 5px
-        &:after
-          content '/'
-          margin-left 5px
-          color #999
-        &:last-child
-          &:after
-            content ''
-        a
-          color #888
-          &:before
-            font-size 0.92rem
-          &:hover
-            color $accentColor
-        .icon-home
-          text-decoration none
-    .info
-      float right
-      line-height 32px
-      @media (max-width 960px)
-        float left
-      div
-        float left
-        margin-left 20px
-        font-size 0.8rem
-        @media (max-width 960px)
-          margin 0 20px 0 0
-        &:before
-          margin-right 3px
-        a
-          color #888
-          &:hover
-            text-decoration none
-        a.beLink
-          &:hover
-            color $accentColor
-            text-decoration underline
+.articleInfo-wrap {
+  @extend $wrapper;
+  position: relative;
+  z-index: 1;
+  color: #888;
+
+  .articleInfo {
+    overflow: hidden;
+    font-size: 0.92rem;
+
+    .breadcrumbs {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      display: inline-block;
+      line-height: 2rem;
+
+      @media (max-width: 960px) {
+        width: 100%;
+      }
+
+      li {
+        list-style-type: none;
+        float: left;
+        padding-right: 5px;
+
+        &:after {
+          content: '/';
+          margin-left: 5px;
+          color: #999;
+        }
+
+        &:last-child {
+          &:after {
+            content: '';
+          }
+        }
+
+        a {
+          color: #888;
+
+          &:before {
+            font-size: 0.92rem;
+          }
+
+          &:hover {
+            color: $accentColor;
+          }
+        }
+
+        .icon-home {
+          text-decoration: none;
+        }
+      }
+    }
+
+    .info {
+      float: right;
+      line-height: 32px;
+
+      @media (max-width: 960px) {
+        float: left;
+      }
+
+      div {
+        float: left;
+        margin-left: 20px;
+        font-size: 0.8rem;
+
+        @media (max-width: 960px) {
+          margin: 0 20px 0 0;
+        }
+
+        &:before {
+          margin-right: 3px;
+        }
+
+        a {
+          color: #888;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+        a.beLink {
+          &:hover {
+            color: $accentColor;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
 </style>
