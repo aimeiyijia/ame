@@ -40,7 +40,8 @@
   "dependencies": {
     "core-js": "^2.6.12",
     "el-form-plus": "0.0.2",
-    "el-table-ts": "^1.2.10",
+    "el-lists": "0.0.2",
+    "el-table-ts": "^1.2.22",
     "element-ui": "^2.15.1",
     "lodash": "^4.17.20",
     "mockjs": "^1.1.0",
