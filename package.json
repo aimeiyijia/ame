@@ -4,7 +4,6 @@
   "scripts": {
     "serve": "vuepress dev docs",
     "build": "vuepress build docs",
-    "editFm": "node utils/editFrontmatter.js",
     "baiduPush": "node utils/baiduPush.js https://ame.cool && bash baiduPush.sh",
     "autoDep": "node utils/autoDeployment.js"
   },
