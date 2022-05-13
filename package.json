@@ -39,7 +39,7 @@
   "dependencies": {
     "core-js": "^2.6.12",
     "el-form-plus": "^0.1.2",
-    "el-lists": "^0.1.0",
+    "el-lists": "^0.1.2",
     "el-table-ts": "^1.3.1",
     "element-ui": "^2.15.1",
     "lodash": "^4.17.20",
