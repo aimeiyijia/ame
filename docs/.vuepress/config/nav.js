@@ -19,6 +19,10 @@ module.exports = [
 				],
 			},
 			{
+				text: "工程化",
+				items: [{ text: "前端工程化", link: "/pages/1299b8/" }],
+			},
+			{
 				text: "规范",
 				items: [{ text: "前端规范", link: "/pages/f70b3b/" }],
 			},
