@@ -44,6 +44,8 @@
     "element-ui": "^2.15.1",
     "lodash": "^4.17.20",
     "mockjs": "^1.1.0",
+    "p-el-select": "^0.0.13",
+    "p-tabs": "^0.0.4",
     "vuepress-theme-knowledge": "^0.1.0"
   }
 }

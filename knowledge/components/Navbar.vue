@@ -29,9 +29,9 @@
           : {}
       "
     >
-      <AlgoliaSearchBox v-if="isAlgoliaSearch" :options="algolia" />
+      <!-- <AlgoliaSearchBox v-if="isAlgoliaSearch" :options="algolia" /> -->
       <SearchBox
-        v-else-if="
+        v-if="
           $site.themeConfig.search !== false &&
           $page.frontmatter.search !== false
         "
@@ -42,13 +42,13 @@
 </template>
 
 <script>
-import AlgoliaSearchBox from '@AlgoliaSearchBox'
+// import AlgoliaSearchBox from '@AlgoliaSearchBox'
 import SearchBox from '@SearchBox'
 import SidebarButton from '@theme/components/SidebarButton.vue'
 import NavLinks from '@theme/components/NavLinks.vue'
 
 export default {
-  components: { SidebarButton, NavLinks, SearchBox, AlgoliaSearchBox },
+  components: { SidebarButton, NavLinks, SearchBox },
 
   data() {
     return {
